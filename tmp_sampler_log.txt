@@ -1,0 +1,8 @@
+﻿Current working directory: C:\Users\Henrich\Documents\tsunamiptha
+Looking for data in: C:\Users\Henrich\Documents\tsunamiptha\data\fault_geometry
+[WindowsPath('C:/Users/Henrich/Documents/tsunamiptha/data/fault_geometry/heidarzadeh_2025_table2.csv'), WindowsPath('C:/Users/Henrich/Documents/tsunamiptha/data/fault_geometry/heidarzadeh_2025_table3.csv')]
+Available scenarios: ['Mw 8.0', 'Mw 8.5', 'Mw 9.0']
+Generating slip for Mw 8.5 -> M0 = 7.079e+21 N*m
+Grid: 15 x 5 = 75 subfaults
+Saved to C:\Users\Henrich\Documents\tsunamiptha\output\slip_samples\slip_Mw8.5_sample0.npy! Mean slip = 5.90 m, Max = 34.26 m
+Script completed successfully.

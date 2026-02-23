@@ -1,0 +1,3 @@
+﻿[plot_slip] Saving plot to: C:\Users\Henrich\Documents\tsunamiptha\output\slip_samples\slip_Mw8.5_sample0.png
+[plot_slip] Save complete: C:\Users\Henrich\Documents\tsunamiptha\output\slip_samples\slip_Mw8.5_sample0.png
+Saved plot to: C:\Users\Henrich\Documents\tsunamiptha\output\slip_samples\slip_Mw8.5_sample0.png
