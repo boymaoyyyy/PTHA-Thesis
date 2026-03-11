@@ -49,7 +49,24 @@ class StochasticSlipGenerator:
 
     def __init__(self, magnitude, fault_params_csv, subfault_size_km=20.0,
                  covariance_model='exponential', correlation_length_km=20.0,
-                 rigidity_pa=4.0e10):
+                 rigidity_pa=4.0e10,
+                 use_kl=False):
+        """
+        Initialize slip generator.
+
+        Args:
+            magnitude (float): Target moment magnitude M_w.
+            fault_params_csv (Path or str): Path to fault geometry CSV file.
+            subfault_size_km (float): Subfault discretization size [km].
+            covariance_model (str): 'exponential' or 'matern'.
+            correlation_length_km (float): Correlation length ξ [km].
+            rigidity_pa (float): Shear modulus μ [Pa]. Default: 40 GPa.
+            use_kl (bool): If True, use Karhunen–Loève (eigen-) decomposition
+                for sampling rather than a Cholesky factorization.  When KL is
+                enabled the eigenmodes are sorted by descending eigenvalue so
+                that the early Sobol dimensions correspond to the directions of
+                largest variance, improving the effectiveness of QMC.
+        """
         """
         Initialize slip generator.
 
@@ -94,8 +111,18 @@ class StochasticSlipGenerator:
         # Target seismic moment
         self.M0_target = hanks_kanamori_moment(magnitude)
 
-        # Build spatial covariance matrix
+        # Build spatial covariance matrix and optionally perform eigen
+        # decomposition for KL-based sampling.
+        self.use_kl = use_kl
         self._build_covariance_matrix()
+
+        if self.use_kl:
+            # compute eigen-decomposition of covariance matrix once
+            vals, vecs = np.linalg.eigh(self.cov_matrix)
+            # sort in descending order
+            idx = np.argsort(vals)[::-1]
+            self.eigvals = vals[idx]
+            self.eigvecs = vecs[:, idx]
 
     def _build_covariance_matrix(self):
         """Build fault-plane coordinate grid and covariance matrix."""
@@ -159,7 +186,14 @@ class StochasticSlipGenerator:
         xi = norm.ppf(u)
 
         # Apply covariance structure
-        log_slip = np.log(self.slip_mean_m) + self.L_chol @ xi
+        if self.use_kl:
+            # KL representation: cov = V diag(vals) V^T
+            # xi corresponds to standard normals for each eigenmode; scale by
+            # sqrt of eigenvalues and project back.
+            coeff = np.sqrt(self.eigvals) * xi
+            log_slip = np.log(self.slip_mean_m) + (self.eigvecs @ coeff)
+        else:
+            log_slip = np.log(self.slip_mean_m) + self.L_chol @ xi
 
         # Exponentiate to get slip
         slip_raw = np.exp(log_slip)

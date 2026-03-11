@@ -127,10 +127,9 @@ def hanks_kanamori_moment(magnitude):
 
     Relation: M_w = (2/3) * log₁₀(M₀) - 10.7
     
-    Inverted: M₀ = 10^(1.5 * (M_w + 10.7)) = 10^(1.5*M_w + 16.05)
-    
-    or equivalently: M₀ = 10^(1.5*M_w + 9.1) in units of dyne·cm,
-                    M₀ = 10^(1.5*M_w + 3.1) in units of N·m.
+    Inverted: M₀ = 10^(1.5 * M_w + 9.1) for units of N·m (SI).
+    This constant is widely used in seismic literature and ensures that
+    a Mw=8 earthquake corresponds to roughly 2.5e22 N·m of seismic moment.
 
     Args:
         magnitude (float or ndarray): Moment magnitude M_w.
@@ -139,11 +138,14 @@ def hanks_kanamori_moment(magnitude):
         float or ndarray: Seismic moment M₀ [N·m].
 
     Notes:
-        Uses standard SI convention: log₁₀(M₀) = 1.5*M_w + 4.4
-        gives M₀ in N·m.
+        Earlier versions mistakenly used a constant of 4.4, which is the
+        offset for conversions to dyne·cm rather than N·m; that error
+        produced moments five orders of magnitude too small and led to
+        unrealistically tiny slip after scaling.
     """
-    # Standard SI formula (M₀ in N·m)
-    return 10.0**(1.5 * magnitude + 4.4)
+    # Standard SI formula (M₀ in N·m) with correct offset
+    # log10(M0) = 1.5*M + 9.1
+    return 10.0**(1.5 * magnitude + 9.1)
 
 
 def hanks_kanamori_magnitude(moment):
