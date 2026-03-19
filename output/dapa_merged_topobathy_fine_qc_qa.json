@@ -1,0 +1,38 @@
+{
+  "shape": [
+    720,
+    720
+  ],
+  "xres_deg": 0.0002777777777778146,
+  "yres_deg": 0.0002777777777778146,
+  "dx_m": 30.47557077653725,
+  "dy_m": 30.705555555559624,
+  "shore_tolerance_m": 0.5,
+  "min_m": -133.98382568359375,
+  "max_m": 278.0,
+  "mean_m": 11.480024337768555,
+  "valid_fraction": 1.0,
+  "land_cells": 258599,
+  "water_cells": 246962,
+  "shore_cells": 13119,
+  "wet_cells_gt_0p5m": 248823,
+  "suitability_checks": {
+    "has_negative_bathymetry": true,
+    "has_positive_topography": true,
+    "has_shoreline_band": true,
+    "has_minimum_wet_cells": true,
+    "gauge_is_valid": true,
+    "full_valid_coverage": true
+  },
+  "suitable_for_inundation_modeling": true,
+  "gauge_validation": {
+    "target_lon": 126.055,
+    "target_lat": 9.745,
+    "selected_lon": 126.05500000004052,
+    "selected_lat": 9.744999999993347,
+    "selected_depth_m": 8.15999984741211,
+    "nearest_wet_km": 0.0,
+    "valid": true,
+    "reason": "Gauge location is acceptable for inundation modeling."
+  }
+}

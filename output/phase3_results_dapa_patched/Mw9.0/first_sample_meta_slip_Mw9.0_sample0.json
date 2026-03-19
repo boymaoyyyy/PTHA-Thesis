@@ -1,0 +1,10 @@
+{
+  "dt0_sec": 0.2,
+  "rise_time_sec": 720.0,
+  "dx_m": 458.5574658921773,
+  "dy_m": 460.58333333291444,
+  "t_end_sec": 3600.0,
+  "wetting_drying": "moving shoreline using h=max(eta-z,0)",
+  "aborted": false,
+  "abort_reason": ""
+}

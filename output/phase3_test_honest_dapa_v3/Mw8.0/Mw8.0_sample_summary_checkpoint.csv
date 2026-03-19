@@ -1,0 +1,7 @@
+sample_index,slip_id,dapa_gauge_max_m,coarse_dapa_p95_m,coarse_dapa_p95_raw_m,dapa_virtual_valid,dapa_virtual_nearest_wet_km,dapa_window_valid,dapa_offshore_p95_abs_eta_m,dapa_offshore_nonzero_cells,aborted,abort_reason,dapa_nonzero_cells
+0,slip_Mw8.0_sample0,,,0.0,False,27.11504962103004,False,0.0,0,False,,0
+1,slip_Mw8.0_sample1,,,0.0,False,27.11504962103004,False,0.0,0,False,,0
+2,slip_Mw8.0_sample10,,,0.0,False,27.11504962103004,False,0.0,0,False,,0
+3,slip_Mw8.0_sample100,,,0.0,False,27.11504962103004,False,0.0,0,False,,0
+4,slip_Mw8.0_sample1000,,,0.0,False,27.11504962103004,False,0.0,0,False,,0
+5,slip_Mw8.0_sample1001,,,0.0,False,27.11504962103004,False,0.0,0,False,,0

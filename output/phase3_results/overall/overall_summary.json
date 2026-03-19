@@ -1,0 +1,18 @@
+{
+  "sample_counts": {
+    "8.0": 4,
+    "8.5": 4,
+    "9.0": 4
+  },
+  "weights": {
+    "8.0": 0.48918944851699153,
+    "8.5": 0.3119209638507639,
+    "9.0": 0.19888958763224468
+  },
+  "thresholds_m": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "recommended_timestep": "adaptive CFL with dt_max=0.50s; initial stable dt\u22480.5000s"
+}

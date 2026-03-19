@@ -1,0 +1,20 @@
+{
+  "mw": 9.0,
+  "n_samples": 4,
+  "mean_max_wave_by_gauge_m": {
+    "mean_max_wave_Davao_m": 0.49807872623205185,
+    "mean_max_wave_Legazpi_m": 0.422052837908268,
+    "mean_max_wave_Dapa_virtual_m": 7.385538339614868
+  },
+  "95th_percentile_inundation_depth_in_dapa_m": 136.53033599853515,
+  "conditional_exceedance_maps": {
+    "0.5": "output\\phase3_results\\Mw9.0\\Mw9.0_conditional_exceedance_0.5m.npy",
+    "1.0": "output\\phase3_results\\Mw9.0\\Mw9.0_conditional_exceedance_1.0m.npy",
+    "2.0": "output\\phase3_results\\Mw9.0\\Mw9.0_conditional_exceedance_2.0m.npy"
+  },
+  "convergence": {
+    "counts": [],
+    "convergence_table": "output\\phase3_results\\Mw9.0\\Mw9.0_convergence_summary.csv",
+    "diff_table": "output\\phase3_results\\Mw9.0\\Mw9.0_ape_successive_differences.csv"
+  }
+}

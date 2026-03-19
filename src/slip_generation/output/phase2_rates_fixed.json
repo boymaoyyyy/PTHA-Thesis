@@ -1,0 +1,61 @@
+{
+  "model": "truncated_exponential_gutenberg_richter",
+  "beta": 0.9,
+  "b": 0.39086503371292664,
+  "operational_magnitude_range": {
+    "min": 7.0,
+    "max": 9.0,
+    "delta_m": 0.5
+  },
+  "validation_only_events": {
+    "2012_Mw7.6": {
+      "magnitude": 7.6
+    },
+    "2023_Mw7.6": {
+      "magnitude": 7.6
+    }
+  },
+  "weights": {
+    "bin_edges": [
+      7.0,
+      7.5,
+      8.0,
+      8.5,
+      9.0
+    ],
+    "bin_centers": [
+      7.25,
+      7.75,
+      8.25,
+      8.75
+    ],
+    "relative_weights": [
+      0.43413365965951295,
+      0.2768158429654913,
+      0.17650557428970917,
+      0.11254492308528667
+    ],
+    "probabilities": [
+      0.43413365965951295,
+      0.2768158429654913,
+      0.17650557428970917,
+      0.11254492308528667
+    ]
+  },
+  "annualization": {
+    "anchor_definition": "annual exceedance rate for Mw >= 7.0",
+    "anchor_value_per_year": 0.02,
+    "bin_rates_from_normalized_probabilities_per_year": [
+      0.008682673193190259,
+      0.005536316859309826,
+      0.0035301114857941834,
+      0.0022508984617057334
+    ],
+    "bin_rates_untruncated_exponential_per_year": [
+      0.007247436967564533,
+      0.004621169837623484,
+      0.0029465879818941533,
+      0.001878827448486099
+    ]
+  }
+}

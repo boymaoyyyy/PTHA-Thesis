@@ -1,0 +1,17 @@
+{
+  "mw": 8.0,
+  "accepted_samples": 64,
+  "attempted_samples": 64,
+  "rejected_samples": 0,
+  "acceptance_rate": 1.0,
+  "reference_mean_slip_m": 2.7,
+  "accepted_mean_of_means_m": 1.5736567647427138,
+  "accepted_mean_of_maxima_m": 4.820188838101272,
+  "accepted_max_of_maxima_m": 9.667113392839443,
+  "accepted_mean_p99_to_mean": 2.674180665184726,
+  "accepted_mean_max_to_mean": 3.0630496726453256,
+  "moment_tolerance": 1e-06,
+  "max_slip_cap_factor": 8.0,
+  "max_to_mean_cap": 8.0,
+  "p99_to_mean_cap": 5.5
+}

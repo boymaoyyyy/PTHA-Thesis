@@ -1,0 +1,350 @@
+{
+  "method": {
+    "type": "anchored_exponential_gr",
+    "description": "Uses \u03bb(Mw>=m) = \u03bb_ref * exp[-\u03b2 (m - m_ref)] when an absolute reference rate is available; then derives incremental \u0394M-bin annual rates by differencing exceedance rates.",
+    "notes": [
+      "This implementation avoids the previous reference-magnitude mismatch bug.",
+      "It aligns with the proposal's central beta = 0.9, beta sensitivity in [0.7, 1.1], and \u0394M = 0.5 binning.",
+      "If no absolute annual reference rate is available, outputs are relative annual weights normalized to probabilities."
+    ]
+  },
+  "configuration": {
+    "beta": 0.9,
+    "magnitude_minimum": 5.0,
+    "magnitude_maximum": 9.0,
+    "delta_m": 0.5,
+    "annual_rate_at_Mw7p0": 0.0,
+    "reference_magnitude": 7.0
+  },
+  "magnitude_levels": [
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0
+  ],
+  "central": {
+    "beta": 0.9,
+    "bin_summary": [
+      {
+        "magnitude_bin": 5.0,
+        "annual_bin_rate": 0.36237184837822667,
+        "normalized_probability": 0.3687971708548451,
+        "return_period_years": 2.759596266860794
+      },
+      {
+        "magnitude_bin": 5.5,
+        "annual_bin_rate": 0.23105849188117417,
+        "normalized_probability": 0.23515545837551421,
+        "return_period_years": 4.327908452350963
+      },
+      {
+        "magnitude_bin": 6.0,
+        "annual_bin_rate": 0.14732939909470757,
+        "normalized_probability": 0.14994174026774995,
+        "return_period_years": 6.7875115635079135
+      },
+      {
+        "magnitude_bin": 6.5,
+        "annual_bin_rate": 0.09394137242430496,
+        "normalized_probability": 0.09560707469787744,
+        "return_period_years": 10.644937094204888
+      },
+      {
+        "magnitude_bin": 7.0,
+        "annual_bin_rate": 0.05989966365972219,
+        "normalized_probability": 0.06096176232157239,
+        "return_period_years": 16.694584558617834
+      },
+      {
+        "magnitude_bin": 7.5,
+        "annual_bin_rate": 0.03819371182211457,
+        "normalized_probability": 0.03887093582871007,
+        "return_period_years": 26.18232039497636
+      },
+      {
+        "magnitude_bin": 8.0,
+        "annual_bin_rate": 0.02435338587270958,
+        "normalized_probability": 0.02478520296426896,
+        "return_period_years": 41.0620521198492
+      },
+      {
+        "magnitude_bin": 8.5,
+        "annual_bin_rate": 0.01552840441974762,
+        "normalized_probability": 0.015803743153677316,
+        "return_period_years": 64.3981167007919
+      },
+      {
+        "magnitude_bin": 9.0,
+        "annual_bin_rate": 0.009901347807799048,
+        "normalized_probability": 0.01007691153578452,
+        "return_period_years": 100.99635114446991
+      }
+    ],
+    "scenario_rates": {
+      "2012_Mw7.6": 0.03819371182211457,
+      "2023_Mw7.6": 0.03819371182211457,
+      "Mw8.0": 0.02435338587270958,
+      "Mw8.5": 0.01552840441974762,
+      "Mw9.0": 0.009901347807799048
+    },
+    "scenario_probabilities": {
+      "2012_Mw7.6": 0.03887093582871007,
+      "2023_Mw7.6": 0.03887093582871007,
+      "Mw8.0": 0.02478520296426896,
+      "Mw8.5": 0.015803743153677316,
+      "Mw9.0": 0.01007691153578452
+    }
+  },
+  "sensitivity": {
+    "beta_0.700": {
+      "beta": 0.7,
+      "bin_summary": [
+        {
+          "magnitude_bin": 5.0,
+          "annual_bin_rate": 0.29531191028128656,
+          "normalized_probability": 0.30853321474211126,
+          "return_period_years": 3.3862501483515968
+        },
+        {
+          "magnitude_bin": 5.5,
+          "annual_bin_rate": 0.2081027859273039,
+          "normalized_probability": 0.21741968171139195,
+          "return_period_years": 4.805317696944854
+        },
+        {
+          "magnitude_bin": 6.0,
+          "annual_bin_rate": 0.14664755468025417,
+          "normalized_probability": 0.1532130601724515,
+          "return_period_years": 6.81907040441533
+        },
+        {
+          "magnitude_bin": 6.5,
+          "annual_bin_rate": 0.10334078516954891,
+          "normalized_probability": 0.10796741869288318,
+          "return_period_years": 9.676721522478491
+        },
+        {
+          "magnitude_bin": 7.0,
+          "annual_bin_rate": 0.07282302049116135,
+          "normalized_probability": 0.07608335403054833,
+          "return_period_years": 13.731921489323168
+        },
+        {
+          "magnitude_bin": 7.5,
+          "annual_bin_rate": 0.05131751519746322,
+          "normalized_probability": 0.05361503341117969,
+          "return_period_years": 19.4865241653289
+        },
+        {
+          "magnitude_bin": 8.0,
+          "annual_bin_rate": 0.03616284175361141,
+          "normalized_probability": 0.03778187547472922,
+          "return_period_years": 27.65269407789654
+        },
+        {
+          "magnitude_bin": 8.5,
+          "annual_bin_rate": 0.025483523874152553,
+          "normalized_probability": 0.02662443765427724,
+          "return_period_years": 39.24104079711993
+        },
+        {
+          "magnitude_bin": 9.0,
+          "annual_bin_rate": 0.017957935758177786,
+          "normalized_probability": 0.018761924110427607,
+          "return_period_years": 55.685687568216984
+        }
+      ],
+      "scenario_rates": {
+        "2012_Mw7.6": 0.05131751519746322,
+        "2023_Mw7.6": 0.05131751519746322,
+        "Mw8.0": 0.03616284175361141,
+        "Mw8.5": 0.025483523874152553,
+        "Mw9.0": 0.017957935758177786
+      },
+      "scenario_probabilities": {
+        "2012_Mw7.6": 0.05361503341117969,
+        "2023_Mw7.6": 0.05361503341117969,
+        "Mw8.0": 0.03778187547472922,
+        "Mw8.5": 0.02662443765427724,
+        "Mw9.0": 0.018761924110427607
+      }
+    },
+    "beta_0.900": {
+      "beta": 0.9,
+      "bin_summary": [
+        {
+          "magnitude_bin": 5.0,
+          "annual_bin_rate": 0.36237184837822667,
+          "normalized_probability": 0.3687971708548451,
+          "return_period_years": 2.759596266860794
+        },
+        {
+          "magnitude_bin": 5.5,
+          "annual_bin_rate": 0.23105849188117417,
+          "normalized_probability": 0.23515545837551421,
+          "return_period_years": 4.327908452350963
+        },
+        {
+          "magnitude_bin": 6.0,
+          "annual_bin_rate": 0.14732939909470757,
+          "normalized_probability": 0.14994174026774995,
+          "return_period_years": 6.7875115635079135
+        },
+        {
+          "magnitude_bin": 6.5,
+          "annual_bin_rate": 0.09394137242430496,
+          "normalized_probability": 0.09560707469787744,
+          "return_period_years": 10.644937094204888
+        },
+        {
+          "magnitude_bin": 7.0,
+          "annual_bin_rate": 0.05989966365972219,
+          "normalized_probability": 0.06096176232157239,
+          "return_period_years": 16.694584558617834
+        },
+        {
+          "magnitude_bin": 7.5,
+          "annual_bin_rate": 0.03819371182211457,
+          "normalized_probability": 0.03887093582871007,
+          "return_period_years": 26.18232039497636
+        },
+        {
+          "magnitude_bin": 8.0,
+          "annual_bin_rate": 0.02435338587270958,
+          "normalized_probability": 0.02478520296426896,
+          "return_period_years": 41.0620521198492
+        },
+        {
+          "magnitude_bin": 8.5,
+          "annual_bin_rate": 0.01552840441974762,
+          "normalized_probability": 0.015803743153677316,
+          "return_period_years": 64.3981167007919
+        },
+        {
+          "magnitude_bin": 9.0,
+          "annual_bin_rate": 0.009901347807799048,
+          "normalized_probability": 0.01007691153578452,
+          "return_period_years": 100.99635114446991
+        }
+      ],
+      "scenario_rates": {
+        "2012_Mw7.6": 0.03819371182211457,
+        "2023_Mw7.6": 0.03819371182211457,
+        "Mw8.0": 0.02435338587270958,
+        "Mw8.5": 0.01552840441974762,
+        "Mw9.0": 0.009901347807799048
+      },
+      "scenario_probabilities": {
+        "2012_Mw7.6": 0.03887093582871007,
+        "2023_Mw7.6": 0.03887093582871007,
+        "Mw8.0": 0.02478520296426896,
+        "Mw8.5": 0.015803743153677316,
+        "Mw9.0": 0.01007691153578452
+      }
+    },
+    "beta_1.100": {
+      "beta": 1.1,
+      "bin_summary": [
+        {
+          "magnitude_bin": 5.0,
+          "annual_bin_rate": 0.42305018961951335,
+          "normalized_probability": 0.42606820494681885,
+          "return_period_years": 2.3637857269355886
+        },
+        {
+          "magnitude_bin": 5.5,
+          "annual_bin_rate": 0.24407872668240715,
+          "normalized_probability": 0.24581997005322148,
+          "return_period_years": 4.097038744802984
+        },
+        {
+          "magnitude_bin": 6.0,
+          "annual_bin_rate": 0.14082117507732544,
+          "normalized_probability": 0.14182578510994304,
+          "return_period_years": 7.101204768749417
+        },
+        {
+          "magnitude_bin": 6.5,
+          "annual_bin_rate": 0.08124675025842022,
+          "normalized_probability": 0.08182635982624528,
+          "return_period_years": 12.308184595929268
+        },
+        {
+          "magnitude_bin": 7.0,
+          "annual_bin_rate": 0.04687529715562631,
+          "normalized_probability": 0.04720970278587769,
+          "return_period_years": 21.33319809536339
+        },
+        {
+          "magnitude_bin": 7.5,
+          "annual_bin_rate": 0.02704469380546757,
+          "normalized_probability": 0.02723762907043127,
+          "return_period_years": 36.975829979551555
+        },
+        {
+          "magnitude_bin": 8.0,
+          "annual_bin_rate": 0.015603430962862833,
+          "normalized_probability": 0.01571474492739935,
+          "return_period_years": 64.08846890020946
+        },
+        {
+          "magnitude_bin": 8.5,
+          "annual_bin_rate": 0.009002396535308724,
+          "normalized_probability": 0.009066619106040768,
+          "return_period_years": 111.08153213178878
+        },
+        {
+          "magnitude_bin": 9.0,
+          "annual_bin_rate": 0.005193930974016319,
+          "normalized_probability": 0.005230984174022319,
+          "return_period_years": 192.53240079675692
+        }
+      ],
+      "scenario_rates": {
+        "2012_Mw7.6": 0.02704469380546757,
+        "2023_Mw7.6": 0.02704469380546757,
+        "Mw8.0": 0.015603430962862833,
+        "Mw8.5": 0.009002396535308724,
+        "Mw9.0": 0.005193930974016319
+      },
+      "scenario_probabilities": {
+        "2012_Mw7.6": 0.02723762907043127,
+        "2023_Mw7.6": 0.02723762907043127,
+        "Mw8.0": 0.01571474492739935,
+        "Mw8.5": 0.009066619106040768,
+        "Mw9.0": 0.005230984174022319
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "name": "2012_Mw7.6",
+      "magnitude": 7.6
+    },
+    {
+      "name": "2023_Mw7.6",
+      "magnitude": 7.6
+    },
+    {
+      "name": "Mw8.0",
+      "magnitude": 8.0
+    },
+    {
+      "name": "Mw8.5",
+      "magnitude": 8.5
+    },
+    {
+      "name": "Mw9.0",
+      "magnitude": 9.0
+    }
+  ],
+  "load_notes": [
+    "Loaded seismicity parameters from philippine_trench_config.",
+    "Loaded rupture scenarios from philippine_trench_config."
+  ]
+}

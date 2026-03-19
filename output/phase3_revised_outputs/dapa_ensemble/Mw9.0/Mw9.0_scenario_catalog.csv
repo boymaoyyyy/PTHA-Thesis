@@ -1,0 +1,2 @@
+mw,slip_id,forcing_mode,runtime_sec,max_dapa_depth_m,p95_dapa_depth_m,max_dapa_eta_m,max_dapa_speed_ms,inundated_area_m2,first_arrival_sec,gauge_max_abs_Dapa_virtual_m
+9.0,slip_Mw9.0_sample0000,dynamic,19860.1777608,0.0,0.0,0.0,0.0,0.0,,0.0

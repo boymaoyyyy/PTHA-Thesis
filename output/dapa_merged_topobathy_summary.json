@@ -1,0 +1,25 @@
+{
+  "gebco": "C:\\Users\\Henrich\\Documents\\tsunamiptha\\data\\bathymetry\\gebco_2025_n25.0_s1.0_w115.0_e140.0.nc",
+  "topography": "C:\\Users\\Henrich\\Documents\\tsunamiptha\\data\\topography\\output_SRTMGL1.tif",
+  "bounds": {
+    "xmin": 125.95,
+    "ymin": 9.65,
+    "xmax": 126.15,
+    "ymax": 9.85
+  },
+  "shape": [
+    48,
+    48
+  ],
+  "crs": "EPSG:4326",
+  "min_m": -52.0,
+  "max_m": 226.6887969970703,
+  "mean_m": 27.920331954956055,
+  "topo_valid_fraction": 1.0,
+  "files": {
+    "tif": "output\\dapa_merged_topobathy.tif",
+    "nc": "output\\dapa_merged_topobathy.nc",
+    "npz": "output\\dapa_merged_topobathy.npz",
+    "preview_png": "output\\dapa_merged_topobathy_preview.png"
+  }
+}

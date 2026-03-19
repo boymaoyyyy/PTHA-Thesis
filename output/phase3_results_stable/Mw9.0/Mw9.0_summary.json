@@ -1,0 +1,10 @@
+{
+  "mw": 9.0,
+  "n_samples": 1,
+  "mean_max_wave_by_gauge_m": {
+    "Davao": 6.142903657746501e-06,
+    "Legazpi": 0.0,
+    "Dapa_virtual": 0.0
+  },
+  "95th_percentile_inundation_depth_in_dapa_m": 0.0
+}

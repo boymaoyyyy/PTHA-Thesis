@@ -1,0 +1,8 @@
+{
+  "n_requested_runs": 5,
+  "n_saved_results": 5,
+  "runtime_total_sec": 3.6603784561157227,
+  "mean_runtime_per_result_sec": 0.7320756912231445,
+  "compare_static": false,
+  "checkpoint_every": 2
+}

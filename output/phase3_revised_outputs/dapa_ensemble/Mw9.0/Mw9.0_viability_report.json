@@ -1,0 +1,17 @@
+{
+  "dapa_only_mode": true,
+  "downsample_factor": 1,
+  "dx_m": 30.475570777025194,
+  "dy_m": 30.705555555462176,
+  "t_end_sec": 10800.0,
+  "solver_has_moving_shoreline": true,
+  "solver_has_local_nested_grid": true,
+  "osm_required_for_inundation_depth": false,
+  "osm_required_for_buildings_and_roads_overlays": true,
+  "regional_hazard_viable": true,
+  "dapa_inundation_viable": false,
+  "paper_like_risk_overlay_viable_without_osm": false,
+  "dapa_nonzero_inundation_cells": 0,
+  "dapa_p95_positive_depth_m": 0.0,
+  "mean_samplewise_dapa_p95_m": 0.0
+}

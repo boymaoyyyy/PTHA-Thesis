@@ -1,0 +1,9 @@
+{
+  "n_results": 5,
+  "checkpoint_tag": "sample_00005",
+  "grid_shape": [
+    25,
+    37
+  ],
+  "downsample_factor": 2
+}

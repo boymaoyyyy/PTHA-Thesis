@@ -1,0 +1,9 @@
+{
+  "dt0_sec": 0.2,
+  "rise_time_sec": 240.0,
+  "dx_m": 916.2508266960457,
+  "dy_m": 921.1666666673998,
+  "t_end_sec": 300.0,
+  "aborted": false,
+  "abort_reason": ""
+}

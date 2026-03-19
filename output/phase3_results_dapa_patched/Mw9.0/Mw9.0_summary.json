@@ -1,0 +1,29 @@
+{
+  "mw": 9.0,
+  "n_samples": 1,
+  "mean_max_wave_by_gauge_m": {
+    "Dapa_virtual": 0.31003037095069885
+  },
+  "95th_percentile_inundation_depth_in_dapa_m": 0.0,
+  "viability": {
+    "dapa_only_mode": true,
+    "downsample_factor": 1,
+    "dx_m": 458.5574658921773,
+    "dy_m": 460.58333333291444,
+    "t_end_sec": 3600.0,
+    "solver_has_moving_shoreline": true,
+    "osm_required_for_inundation_depth": false,
+    "osm_required_for_buildings_and_roads_overlays": true,
+    "regional_hazard_viable": true,
+    "dapa_inundation_viable": false,
+    "paper_like_risk_overlay_viable_without_osm": false,
+    "dapa_nonzero_inundation_cells": 0,
+    "dapa_p95_positive_depth_m": 0.0,
+    "mean_samplewise_dapa_p95_m": 0.0,
+    "notes": [
+      "Without OSM, the code can produce hazard/inundation maps but not building or road exposure overlays.",
+      "The patched solver now allows shoreline wetting and drying through h=max(eta-z,0), so inland inundation can occur.",
+      "For paper-like Dapa mapping, keep downsample-factor small and run longer durations."
+    ]
+  }
+}

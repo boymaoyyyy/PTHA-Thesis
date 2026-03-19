@@ -1,0 +1,12 @@
+{
+  "mw": 9.0,
+  "samples_completed": 1,
+  "latest_sample_index": 0,
+  "latest_slip_id": "slip_Mw9.0_sample76",
+  "aborted_samples": 0,
+  "valid_dapa_virtual_samples": 0,
+  "valid_dapa_window_samples": 0,
+  "max_dapa_gauge_max_m": 0.0,
+  "max_coarse_dapa_p95_m": 0.0,
+  "sample_summary_csv": "C:\\Users\\Henrich\\Documents\\tsunamiptha\\tmp_mw90_sample76\\output\\phase3_runtime_sample76\\Mw9.0\\Mw9.0_sample_summary_checkpoint.csv"
+}

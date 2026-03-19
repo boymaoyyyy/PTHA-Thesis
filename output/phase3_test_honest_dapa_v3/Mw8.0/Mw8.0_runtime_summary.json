@@ -1,0 +1,48 @@
+{
+  "mw": 8.0,
+  "n_samples": 6,
+  "workers": 6,
+  "downsample_factor": 2,
+  "t_end_sec": 3600.0,
+  "dt_max": 0.5,
+  "regional_grid_shape": [
+    397,
+    181
+  ],
+  "regional_dx_m": 917.1200042460222,
+  "regional_dy_m": 921.1666666666143,
+  "dapa_nominal_window_shape": [
+    17,
+    18
+  ],
+  "dapa_nominal_max_static_depth_m": 0.0,
+  "dapa_nominal_wet_cells_gt_min": 0,
+  "dapa_effective_window_shape": [
+    61,
+    66
+  ],
+  "dapa_effective_wet_cells_gt_min": 12,
+  "dapa_window_valid": false,
+  "aborted_samples": 0,
+  "valid_dapa_virtual_samples": 0,
+  "valid_dapa_window_samples": 0,
+  "mean_dapa_gauge_max_m": null,
+  "max_dapa_gauge_max_m": null,
+  "mean_coarse_dapa_p95_m": null,
+  "max_coarse_dapa_p95_m": null,
+  "mean_coarse_dapa_p95_raw_m": 0.0,
+  "max_coarse_dapa_p95_raw_m": 0.0,
+  "mean_dapa_offshore_p95_abs_eta_m": 0.0,
+  "max_dapa_offshore_p95_abs_eta_m": 0.0,
+  "nonzero_inundation_samples": 0,
+  "sample_summary_csv": "C:\\Users\\Henrich\\Documents\\tsunamiptha\\output\\phase3_test_honest_dapa_v3\\Mw8.0\\Mw8.0_sample_summary.csv",
+  "coarse_dapa_stack_npz": "C:\\Users\\Henrich\\Documents\\tsunamiptha\\output\\phase3_test_honest_dapa_v3\\Mw8.0\\Mw8.0_coarse_dapa_max_depth_stack.npz",
+  "notes": [
+    "Phase 3 runtime-only mode: no PNG maps are generated here.",
+    "Fine local nested inundation is disabled to maximize throughput.",
+    "BLAS/OpenMP threads are capped at 1 per worker to reduce oversubscription.",
+    "Worker initialization and per-sample logs are silenced; only startup and one progress bar are shown.",
+    "Dapa gauge maxima are tracked every solver step, so they remain valid even when snapshot_stride is very large.",
+    "Coarse Dapa land metrics are validity-masked when the nominal Dapa window is under-resolved or the virtual gauge is too far from Dapa."
+  ]
+}

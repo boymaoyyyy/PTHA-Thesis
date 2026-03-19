@@ -1,0 +1,10 @@
+{
+  "target_lon": 126.055,
+  "target_lat": 9.745,
+  "selected_lon": 126.05500000004052,
+  "selected_lat": 9.744999999993347,
+  "selected_depth_m": 8.15999984741211,
+  "nearest_wet_km": 0.0,
+  "valid": true,
+  "reason": "Gauge location is acceptable for inundation modeling."
+}

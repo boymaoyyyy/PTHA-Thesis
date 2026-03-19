@@ -1,0 +1,17 @@
+{
+  "project_root": ".",
+  "output_dirname": "RQMC_samples_revised",
+  "seed": 42,
+  "n_along": 15,
+  "n_down": 5,
+  "corr_length_km": 20.0,
+  "hurst_nu": 0.3,
+  "shear_modulus_pa": 40000000000.0,
+  "sigma_ln": 0.55,
+  "max_attempt_factor": 30,
+  "moment_tolerance": 1e-06,
+  "max_slip_cap_factor": 8.0,
+  "max_to_mean_cap": 8.0,
+  "p99_to_mean_cap": 5.5,
+  "save_preview_png": true
+}
